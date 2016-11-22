@@ -15,9 +15,9 @@ class DebugTypo3CacheHit
     public function debug($params, $pObj)
     {
         if ($pObj->cacheContentFlag) {
-            header('X-TYPO3-Cache: Hit');
+            header('X-TYPO3-Cache: HIT');
         } else {
-            header('X-TYPO3-Cache: Miss');
+            header('X-TYPO3-Cache: MISS');
         }
     }
 }
