@@ -1,7 +1,7 @@
 {
     "name": "qbus/cache-status",
     "type": "typo3-cms-extension",
-    "description": "Automatic cache flush for menus and levelmedia",
+    "description": "Adds a X-TYPO3-Cache header to indicate cache hits/misses",
     "keywords": [
         "TYPO3",
         "extension"

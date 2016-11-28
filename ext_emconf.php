@@ -3,7 +3,7 @@
 $EM_CONF[$_EXTKEY] = array(
     'title' => 'cache_status',
     'description' => '',
-    'category' => '',
+    'category' => 'Adds a X-TYPO3-Cache header to indicate cache hits/misses',
     'author' => '',
     'author_email' => 'bfr@qbus.de',
     'state' => 'stable',
