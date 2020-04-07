@@ -9,12 +9,19 @@ namespace Qbus\CacheStatus\Hooks;
  */
 class DebugTypo3CacheHit
 {
+    public function hitCache($pObj)
+    {
+        return \Closure::bind(function() use ($pObj) {
+            return $pObj->cacheContentFlag;
+        }, null, $pObj)();
+    }
+
     /**
      * @return void
      */
     public function debug($params, $pObj)
     {
-        if ($pObj->cacheContentFlag) {
+        if ($this->hitCache($pObj)) {
             header('X-TYPO3-Cache: HIT');
         } else {
             header('X-TYPO3-Cache: MISS');
