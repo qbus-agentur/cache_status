@@ -11,9 +11,9 @@ class DebugTypo3CacheHit
 {
     public function hitCache($pObj)
     {
-        return \Closure::bind(function() use ($pObj) {
+        return call_user_func(\Closure::bind(function() use ($pObj) {
             return $pObj->cacheContentFlag;
-        }, null, $pObj)();
+        }, null, $pObj));
     }
 
     /**
