@@ -6,9 +6,6 @@ return [
             'before' => [
                 'typo3/cms-frontend/tsfe',
             ],
-            'after' => [
-                'typo3/cms-frontend/page-argument-validator',
-            ],
         ],
     ],
 ];
