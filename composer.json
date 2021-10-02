@@ -17,11 +17,16 @@
     ],
     "license": "GPL-2.0+",
     "require": {
-        "typo3/cms-core": "^7.6.0 || ^8.4.0 || ^9.5.17 || ^10.4.2"
+        "typo3/cms-core": "^7.6.0 || ^8.4.0 || ^9.5.17 || ^10.4.2 || ^11.0.0"
     },
     "autoload": {
         "psr-4": {
             "Qbus\\CacheStatus\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "cache_status"
         }
     },
     "replace": {
