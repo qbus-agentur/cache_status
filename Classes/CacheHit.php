@@ -35,7 +35,7 @@ final class CacheHit implements MiddlewareInterface
     private function hitCache(TypoScriptFrontendController $tsfe): bool
     {
         return call_user_func(\Closure::bind(function() use ($tsfe) {
-            return $tsfe->cacheContentFlag;
+            return $tsfe->pageContentWasLoadedFromCache ?? $tsfe->cacheContentFlag ?? false;
         }, null, $tsfe));
     }
 }
